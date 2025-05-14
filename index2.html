@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jimfluencer Website</title>
+  <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  </head>
+  
+  <link rel="stylesheet" href="sytle.css">
+  <script src="script.js" defer></script>
+  <script src="feature.js" defer></script>
+  <script src="contect.js"></script>
+</head>
+
+<style>
+    /* Workout Plans Section Styling */
+.workout-plans-section {
+    padding: 50px 20px;
+    background-color: #0b1320; /* Deep navy background */
+    text-align: center;
+    color: #ffffff; /* White text for titles */
+  }
+  
+  .workout-plans-section .section-header {
+    margin-bottom: 40px;
+  }
+  
+  .workout-plans-section .section-header .tag {
+    font-size: 18px;
+    color: #ff4d4d; /* Bright red-orange */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+  }
+  
+  .workout-plans-section h2 {
+    font-size: 40px;
+    font-weight: 800;
+    color: #ffffff;
+  }
+  
+  /* Workout Cards Layout */
+  .workout-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+  
+  /* Individual Card Styling */
+  .workout-card {
+    background-color: #ffffff; /* White background for card */
+    color: #000000;
+    padding: 25px;
+    border-radius: 15px;
+    width: 280px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .workout-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+  }
+  
+  .workout-card .workout-image img {
+    width: 100%;
+    height: 180px;
+    border-radius: 12px;
+    object-fit: cover;
+  }
+  
+  .workout-card h3 {
+    font-size: 22px;
+    margin-top: 15px;
+    color: #111111;
+    font-weight: bold;
+  }
+  
+  .workout-card p {
+    font-size: 15px;
+    color: #555555;
+    margin: 10px 0 20px;
+  }
+  
+  .workout-card .status {
+    font-weight: bold;
+    color: #e74c3c; /* Red/Orange for "Class Full" */
+    margin-bottom: 8px;
+  }
+  
+  /* Progress Bar Style */
+  .workout-card .progress-bar {
+    height: 8px;
+    background-color: #eeeeee;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-top: 5px;
+  }
+  
+  .workout-card .progress-bar-fill {
+    height: 100%;
+    width: 100%; /* Adjust this to reflect class fill */
+    background-color: #ff4d4d;
+  }
+  
+  /* Button (if any) */
+  .workout-button {
+    background-color: #e74c3c;
+    color: white;
+    font-size: 15px;
+    padding: 10px 22px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .workout-button:hover {
+    background-color: #c0392b;
+  }
+  
+</style>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav>
+    <div class="logo"><img src="images/logo-2.png" alt="Energy Fitness Club Logo"></div>
+    <div class="hamburger" id="hamburger">
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#features">Features</a></li>
+      <li><a href="#testimonials">Testimonials</a></li>
+      <li><a href="#pricing">Pricing</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#contact">Contact</a></li>
+
+      <!-- Other with Dropdown -->
+      <li class="dropdown">
+        <a href="#other" id="other-menu">Other</a>
+        <ul class="dropdown-list" id="dropdownList">
+            <li class="dropdown">
+                <a href="#diet" id="diet-menu">Diet</a>
+                <ul class="dropdown-list sub-dropdown" id="dietDropdown">
+                    <li class="Aa"><a href="#keto">Keto Diet</a></li>
+                    <li><a href="#vegan">Vegan Diet</a></li>
+                    <li><a href="#paleo">Paleo Diet</a></li>
+                </ul>
+            </li>
+            <li><a href="#videos">Videos</a></li>
+            <li><a href="#new-list">Our New List</a></li>
+            <li><a href="#charts">Charts</a></li>
+        </ul>
+    </li>
+    
+    </ul>
+  </nav>
+
+
+<!-- hero section -->
+  <section class="hero">
+   
+    
+    <div class="hero-tag">
+        <span class="highlight">THE BEST</span>
+        <span class="normal">FITNESS CLUB</span>
+    </div>
+    <h1>Work Hard To <br> Get Better Life</h1>
+    <!-- <p>Duis mollis felis quis libero dictum vehicula. Duis dictum lorem mi, a faucibus nisi eleifend eu.</p> -->
+    <button class="hero-btn">GET STARTED</button>
+  
+</section>
+
+
+<<section id="workout-plans" class="workout-plans-section">
+    <div class="section-header">
+      <span class="tag">OUR WORKOUT PLANS</span>
+      <h2>Fitness Plans For Every Level</h2>
+    </div>
+  
+    <div class="workout-grid">
+      <div class="workout-card">
+        <div class="workout-image">
+          <img src="images/weight-lifting.jpg" alt="Beginner Workout">
+        </div>
+        <div class="workout-content">
+          <h3><img src="images/class-icon-1.png" alt=""> Beginner</h3>
+          <p>Start your fitness journey with simple exercises that focus on building strength and endurance.</p>
+          <div>
+            <span class="status">Open</span>
+          </div>
+          <button class="workout-button">Get Started</button>
+        </div>
+      </div>
+  
+      <div class="workout-card">
+        <div class="workout-image">
+          <img src="images/intermediate-workout.jpg" alt="Intermediate Workout">
+        </div>
+        <div class="workout-content">
+          <h3><img src="images/class-icon-2.png" alt=""> Intermediate</h3>
+          <p>Increase your intensity with a balanced mix of strength and cardio exercises.</p>
+          <div>
+            <span class="status">Open</span>
+          </div>
+          <button class="workout-button">Get Started</button>
+        </div>
+      </div>
+  
+      <div class="workout-card">
+        <div class="workout-image">
+          <img src="images/advanced-workout.jpg" alt="Advanced Workout">
+        </div>
+        <div class="workout-content">
+          <h3><img src="images/class-icon-3.png" alt=""> Advanced</h3>
+          <p>Push your limits with intense and challenging routines to reach peak fitness.</p>
+          <div>
+            <span class="status">Open</span>
+          </div>
+          <button class="workout-button">Get Started</button>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+
+  <!-- Gallery Section -->
+  <section class="scroll-section" id="gallery">
+    <h2>Workout Gallery</h2>
+    <div class="gallery">
+      <img src="images/gym1.jpg" alt="Workout 1" class="gallery-item">
+      <img src="images/gym2.jpg" alt="Workout 2" class="gallery-item">
+      <img src="images/gym3.jpg" alt="Workout 3" class="gallery-item">
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="scroll-section" id="testimonials">
+    <h2>What Our Users Say</h2>
+    <div class="testimonial-5">
+      <p>"This app revolutionized my workouts!"</p>
+      <span>- John Doe</span>
+    </div>
+    <div class="testimonial-5">
+      <p>"Simple, intuitive, and effective."</p>
+      <span>- Jane Smith</span>
+    </div>
+    <div class="testimonial-5">
+      <p>"I can't imagine gymming without it!"</p>
+      <span>- Mark Johnson</span>
+    </div>
+  </section>
+  
+  <!-- Pricing Section -->
+  <section class="scroll-section" id="pricing">
+      <h2>Membership Packages</h2>
+      
+      <div class="pricing-container">
+          <!-- Platinum Membership -->
+          <div class="pricing-plan platinum">
+              <h3>🏋️ Platinum Membership</h3>
+              <p class="price">$120/month</p>
+              <ul class="plan-features">
+                  <li>✔ 2 training sessions per month</li>
+                  <li>✔ Health check</li>
+                  <li>✔ 10% off gym gear</li>
+              </ul>
+              <button class="plan-btn">Join Now</button>
+          </div>
+  
+          <!-- Gold Membership -->
+          <div class="pricing-plan gold">
+              <h3>🏆 Gold Membership</h3>
+              <p class="price">$90/month</p>
+              <ul class="plan-features">
+                  <li>✔ Unlimited gym access</li>
+                  <li>✔ 3 free classes per week</li>
+                  <li>✔ 1 personal training session per month</li>
+                  <li>✔ Free health assessment</li>
+              </ul>
+              <button class="plan-btn">Join Now</button>
+          </div>
+  
+          <!-- Silver Membership -->
+          <div class="pricing-plan silver">
+              <h3>🥈 Silver Membership</h3>
+              <p class="price">$60/month</p>
+              <ul class="plan-features">
+                  <li>✔ Unlimited gym access</li>
+                  <li>✔ 1 class per week</li>
+                  <li>✔ Access to standard locker rooms</li>
+              </ul>
+              <button class="plan-btn">Join Now</button>
+          </div>
+      </div>
+  
+  </section>
+  
+
+  <!-- blog  -->
+  <section class="blog-section"> 
+    <div class="blog-header">
+        <span class="blog-tag">OUR NEWS</span>
+        <h2>Latest Blog Feed</h2>
+    </div>
+    <div class="blog-container">
+        <div class="blog-card">
+            <img src="images/blog-1.jpg" alt="Going to the gym">
+            <div class="blog-content">
+                <span class="blog-date">7 JULY 2022</span>
+                <h3>Going to the gym for the first time</h3>
+                <p>Praesent id ipsum pellentesque lectus dapibus condimentum curabitur eget risus quam.</p>
+                <a href="#" class="read-more">READ MORE</a>
+            </div>
+        </div>
+
+        <div class="blog-card">
+            <img src="images/blog-2.jpg" alt="Treadmill Workout">
+            <div class="blog-content">
+                <span class="blog-date">7 JULY 2022</span>
+                <h3>Parturient accumsan cacus pulvinar magna</h3>
+                <p>Praesent id ipsum pellentesque lectus dapibus condimentum curabitur eget risus quam.</p>
+                <a href="#" class="read-more">READ MORE</a>
+            </div>
+        </div>
+
+        <div class="blog-card">
+            <img src="images/blog-3.jpg" alt="Strength Training">
+            <div class="blog-content">
+                <span class="blog-date">7 JULY 2022</span>
+                <h3>Risus purus namien parturient accumsan cacus</h3>
+                <p>Praesent id ipsum pellentesque lectus dapibus condimentum curabitur eget risus quam.</p>
+                <a href="#" class="read-more">READ MORE</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+  
+  
+<!-- Footer Section -->
+
+<footer>
+  <div class="footer-container">
+    
+    <!-- About Section -->
+    <div class="footer-about">
+      <h2 class="footer-logo">Jimfluencer</h2>
+      <p>Helping you stay fit with the best workout routines and fitness plans.</p>
+      <div class="footer-hours">
+        <div class="footer-time">
+          <img src="images/footer-clock.png" alt="Clock Icon" class="icon">
+          <div>
+            <strong>Monday - Friday</strong>
+            <p>7:00 AM - 10:00 PM</p>
+            <strong>Saturday - Sunday</strong>
+            <p>7:00 AM - 2:00 PM</p>
+          </div>
+        </div>
+        
+       
+      </div>
+      
+    </div>
+
+    <!-- Links -->
+    <div class="footer-links">
+      <h3>Our Links</h3>
+      <ul>
+        <li><a href="http://127.0.0.1:3000/fitlife-master/index.html">🏠 Home</a></li>
+        <li><a href="#">ℹ️ About Us</a></li>
+        <li><a href="#">💪 Workout Plans</a></li>
+        <li><a href="#">📝 Blog</a></li>
+        <li><a href="#">📞 Contact Us</a></li>
+      </ul>
+    </div>
+
+   <!-- Contact Info -->
+<!-- Contact Info -->
+<div class="footer-contact">
+  <h3>Contact Us</h3>
+  <div class="contact-item">
+      <i class="fa-solid fa-location-dot contact-icon"></i>
+      <p>123 Fitness Street, Gym City</p>
+  </div>
+  <div class="contact-item">
+      <i class="fa-solid fa-phone contact-icon"></i>
+      <p>+91 555 234-8765<br>1800-121-3637</p>
+  </div>
+  <div class="contact-item">
+      <i class="fa-solid fa-envelope contact-icon"></i>
+      <p>info@jimfluencer.com<br>services@jimfluencer.com</p>
+  </div>
+</div>
+
+
+
+    <!-- Newsletter -->
+    <div class="footer-newsletter">
+      <h3>Our Newsletter</h3>
+      <form>
+        <input type="email" placeholder="Email Address" required>
+        <button type="submit">&#10148;</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Social Media & Copyright -->
+  <div class="footer-bottom">
+    <div class="social-links">
+      <a href="#">📘 Facebook</a>
+      <a href="#">📸 Instagram</a>
+      <a href="#">🐦 Twitter</a>
+    </div>
+    <p>&copy; 2024 Jimfluencer. All Rights Reserved.</p>
+  </div>
+</footer>
+
+
+
+  <script>
+    document.getElementById('hamburger').addEventListener('click', function () {
+      document.querySelector('.nav-links').classList.toggle('nav-active');
+    });
+  </script>
+</body>
+
+</html>
